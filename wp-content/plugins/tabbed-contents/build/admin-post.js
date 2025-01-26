@@ -1,0 +1,1 @@
+window.copyBPlAdminShortcode=function(e){var o=document.querySelector("#bPlAdminShortcode-"+e+" input");o.select(),o.setSelectionRange(0,99999),document.execCommand("copy"),document.querySelector("#bPlAdminShortcode-"+e+" .tooltip").innerHTML="Copied Successfully!"};

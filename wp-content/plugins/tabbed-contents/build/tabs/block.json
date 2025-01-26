@@ -1,0 +1,170 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "tcb/tabs",
+  "version": "1.0.4",
+  "title": "Tabbed Content",
+  "category": "widgets",
+  "description": "Display responsive, accessible tabs featuring dynamic content.",
+  "keywords": [
+    "tab",
+    "tabs",
+    "navigation"
+  ],
+  "textdomain": "tabbed-content",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "tabs": {
+      "type": "array",
+      "default": [
+        {
+          "title": "HTML5 Audio Player",
+          "icon": "fa-solid fa-music"
+        },
+        {
+          "title": "HTML5 Video Player",
+          "icon": "fa-solid fa-video"
+        },
+        {
+          "title": "PDF Poster",
+          "icon": "fa-solid fa-file-pdf"
+        }
+      ]
+    },
+    "options": {
+      "type": "object",
+      "default": {
+        "theme": "default"
+      }
+    },
+    "elements": {
+      "type": "object",
+      "default": {
+        "icon": true,
+        "title": true,
+        "isTabBG": false
+      }
+    },
+    "TabbedPadding": {
+      "type": "object",
+      "default": {
+        "top": "10px",
+        "right": "10px",
+        "bottom": "10px",
+        "left": "10px"
+      }
+    },
+    "tabsPadding": {
+      "type": "object",
+      "default": {
+        "top": "0px",
+        "right": "0px",
+        "bottom": "0px",
+        "left": "0px"
+      }
+    },
+    "tabColors": {
+      "type": "object",
+      "default": {
+        "color": "#333",
+        "bgType": "gradient",
+        "gradient": "linear-gradient(to right, #f3fbed, #f1f9eb, #f0f7e9, #e4eedc, #dbeccd)"
+      }
+    },
+    "tabActiveColors": {
+      "type": "object",
+      "default": {
+        "color": "#fff",
+        "bgType": "gradient",
+        "gradient": "linear-gradient(90deg, #019447 0%, #10d56d 100%)"
+      }
+    },
+    "tabBorder": {
+      "type": "object",
+      "default": {
+        "active": {
+          "width": 0,
+          "color": "#000",
+          "style": "solid"
+        },
+        "normal": {
+          "width": 0,
+          "color": "#000",
+          "style": "solid"
+        }
+      }
+    },
+    "titleTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": 20
+      }
+    },
+    "icon": {
+      "type": "object",
+      "default": {
+        "size": "55px",
+        "color": "#000",
+        "activeColor": "#fff"
+      }
+    },
+    "borderHeight": {
+      "type": "object",
+      "default": {
+        "height": "3px"
+      }
+    },
+    "tabbedBG": {
+      "type": "object",
+      "default": {
+        "color": "#FFF1F3",
+        "type": "solid"
+      }
+    },
+    "borderBG": {
+      "type": "object",
+      "default": {
+        "gradient": "linear-gradient(to right, rgba(157, 71, 240, 1), rgba(71, 240, 240, 0.8))",
+        "type": "gradient"
+      }
+    },
+    "tabMenuBorder": {
+      "type": "object",
+      "default": {
+        "width": "1px",
+        "menuBColor": "#ccc"
+      }
+    },
+    "contentBG": {
+      "type": "object",
+      "default": {
+        "gradient": "-webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(232,243,214,1) 0%, rgba(242,246,203,1) 39%, rgba(242,246,202,1) 70%, rgba(252,249,190,1) 90%)",
+        "type": "gradient"
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": [
+    "file:./index.js",
+    "wp-api"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": [
+    "file:./view.css",
+    "fontAwesome"
+  ],
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "tcb/tab",
+  "title": "Tab",
+  "description": "Tab for Tab content block",
+  "category": "widgets",
+  "version": "1.0.4",
+  "parent": [
+    "tcb/tabs"
+  ],
+  "keywords": [
+    "tab",
+    "tabs",
+    "navigation"
+  ],
+  "textdomain": "tabbed-content",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "HTML5 Audio Player"
+    },
+    "icon": {
+      "type": "object",
+      "default": {
+        "class": "fa-solid fa-music"
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}
